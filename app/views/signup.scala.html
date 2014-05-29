@@ -1,0 +1,63 @@
+@(form: Form[Application.Signup])
+<html>
+    <head>
+        <title>Sign up</title>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href='@routes.Assets.at("assets/css/demo.css")'>
+        <link rel="stylesheet" href='@routes.Assets.at("assets/css/sky-forms.css")'>
+    </head>
+    <body class="bg-cyan">
+        <div class="body body-s">
+        
+                @helper.form(routes.Application.signup_authenticate, 'class -> "sky-form") {
+                    <a href="@routes.Application.index" style="text-decoration:none"><header>Registration form</header></a>
+                    
+                    <fieldset>                  
+                        <section>
+                            <label class="input">
+                                
+                                <input type="email" name="email" placeholder="Email" value="@form("email").value" required>
+                                <b class="tooltip tooltip-bottom-right">Please enter a valid email address</b>
+                            </label>
+                        </section>
+                        
+                        <section>
+                            <label class="input">
+                                
+                                <input type="text" name="username" placeholder="username" required>
+                                <b class="tooltip tooltip-bottom-right">Please enter a username</b>
+                            </label>
+                        </section>
+                        
+                        <section>
+                            <label class="input">
+                                
+                                <input type="password" name="password" placeholder="password" required>
+                                <b class="tooltip tooltip-bottom-right">Please enter a password</b>
+                            </label>
+                        </section>
+
+                    </fieldset>
+
+                    <footer>
+                        <button type="submit" class="button">Submit</button>
+                    </footer>
+                }
+
+                @if(flash.contains("emailExists")) {
+                    <script type="text/javascript">
+                        alert ("Email already exist");
+                    </script>
+                }
+
+                @if(flash.contains("nameExists")) {
+                    <script type="text/javascript">
+                        alert ("Username already exist");
+                    </script>
+                }
+
+        </div>
+    </body>
+</html>

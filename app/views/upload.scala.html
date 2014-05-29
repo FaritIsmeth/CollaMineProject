@@ -1,0 +1,64 @@
+@(user: User) <!--, form: Form[Application.Upload]) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Full Plugin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href='@routes.Assets.at("bootstrap.min.css")'/>
+    <link rel="stylesheet" href='@routes.Assets.at("assets/css/paceleft.css")' />
+    <link rel="stylesheet" href='@routes.Assets.at("assets/dropzone-master/downloads/css/dropzone.css")'>
+    <link rel="stylesheet" href='@routes.Assets.at("assets/dropzone-master/downloads/css/basic.css")'>
+    <link rel="stylesheet" href='@routes.Assets.at("assets/dropzone-master/downloads/css/stylus/basic.styl")'>
+    <link rel="stylesheet" href='@routes.Assets.at("assets/dropzone-master/downloads/css/stylus/dropzone.styl")'>
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <a href="@routes.Application.upload" class="navbar-brand">The CollaMine Project - Upload Page</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"> <a href="@routes.Application.upload">Welcome, @user.name</a></li>
+                        <li> <a href="@routes.Application.download">Download</a> </li>
+                        <li> <a href="@routes.Application.logout">Logout</a> </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <form id="my-awesome-dropzone" action="/upload" class="dropzone">  
+                    <div class="dropzone-previews"></div>
+                    <div class="fallback"> <!-- this is the fallback if JS isn't working -->
+                    <input name="file" type="file" multiple />
+                    </div>
+                  </form>
+            </div>
+        </div>  
+    </div>
+
+    <script src='@routes.Assets.at("assets/js/pace.js")'></script>
+    <script src='@routes.Assets.at("assets/dropzone-master/downloads/dropzone.min.js")'></script>
+    <script src='@routes.Assets.at("assets/dropzone-master/downloads/dropzone-amd-module.min.js")'></script>
+    <script src='@routes.Assets.at("assets/dropzone-master/libs/dropzone.js")'></script>
+    <script src="https://raw.githubusercontent.com/enyo/dropzone/master/downloads/dropzone.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>

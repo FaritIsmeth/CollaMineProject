@@ -1,0 +1,56 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+a {
+	text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+.bg-red {
+	background-image: url(assets/images/bg-red.jpg);
+}
+.bg-orange {
+	background-image: url(assets/images/bg-orange.jpg);
+}
+.bg-yellow {
+	background-image: url(assets/images/bg-yellow.jpg);
+}
+.bg-green {
+	background-image: url(assets/images/bg-green.jpg);
+}
+.bg-cyan {
+	background: url(../images/bg-cyan.jpg) repeat;
+}
+.bg-blue {
+	background-image: url(assets/images/bg-blue.jpg);
+}
+.bg-purple {
+	background-image: url(assets/images/bg-purple.jpg);
+}
+.bg-pink {
+	background-image: url(assets/images/bg-pink.jpg);
+}
+.bg-black {
+	background-image: url(assets/images/bg-black.jpg);
+}
+.body {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 40px;
+}
+.icon-append icon-user {
+background: url(../images/user-icon.png) no-repeat center;
+}
+.body-s {
+	max-width: 400px;
+}
+@media screen and (max-width: 600px) {
+	.body {
+		padding: 20px;
+	}
+}

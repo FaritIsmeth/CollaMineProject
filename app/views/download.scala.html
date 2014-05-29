@@ -1,0 +1,72 @@
+@(user: User, files: List[File])
+
+@import helper._
+@import java.lang.Object
+@import java.util.List
+<head>
+    <meta charset="UTF-8">
+    <title>Download page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href='@routes.Assets.at("bootstrap.min.css")'/>
+    <link rel="stylesheet" href='@routes.Assets.at("assets/css/download.css")' />
+    <link rel="stylesheet" href='@routes.Assets.at("assets/css/paceleft2.css")' />
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <a href="@routes.Application.download" class="navbar-brand">The CollaMine Project - Download Page</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"> <a href="@routes.Application.download">Welcome, @user.name</a></li>
+                        <li> <a href="@routes.Application.upload">Upload</a> </li>
+                        <li> <a href="@routes.Application.logout">Logout</a> </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+
+    <!--<div class="col-sm-12 col-xs-12">
+        <h1>Welcome, @user.name</h1>
+            <ul>
+                @for(file <- files) {
+                    <li>
+                        <a href="@routes.Application.downloadfile(file.filename.toString())">@file.filename</a>
+
+                        @file.datetime
+
+                      
+
+                    </li>
+                }
+            </ul>
+    </div>-->
+                <div class="container">
+                    @for(file <- files) {
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="ca-menu">
+                                <a href="@routes.Application.downloadfile(file.filename.toString())" style="text-decoration:none"><li>
+                                    <div class="ca-content">
+                                        <h2 class="ca-main">@file.filename</h2>
+                                        <h3 class="ca-sub">Uploaded on: @file.datetime</h3>
+                                    </div>
+                                </li></a>
+                            </ul>
+                        </div>
+                    </div>  
+                    }
+                </div>
+    <script src='@routes.Assets.at("assets/js/pace.js")'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!--<script src='@routes.Assets.at("bootstrap.min.js")'></script>-->
+</body>
+</html>

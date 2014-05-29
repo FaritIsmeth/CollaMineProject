@@ -1,0 +1,29 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /webjars/*file              controllers.WebJarAssets.at(file)
+
+POST    /uploadlogin                controllers.Application.uploadlogin_authenticate()
+GET     /uploadlogin                controllers.Application.uploadlogin()
+POST	/downloadlogin				controllers.Application.downloadlogin_authenticate()
+GET		/downloadlogin 				controllers.Application.downloadlogin()
+
+POST    /upload                     controllers.Application.check_upload()
+GET     /upload                     controllers.Application.upload()
+# POST	/download 					controllers.Application.check_download()
+GET     /downloadfile          		controllers.Application.downloadfile(flename: String)
+GET		/download					controllers.Application.download()
+
+# DELETE  /todos/:filename            controllers.Application.delete(filename: String)
+
+POST    /signup                     controllers.Application.signup_authenticate()
+GET    	/signup                     controllers.Application.signup()
+
+GET     /logout                     controllers.Application.logout()
+
+

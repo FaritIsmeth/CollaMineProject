@@ -1,0 +1,202 @@
+@(message: String)
+
+
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Homepage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href='@routes.Assets.at("assets/css/bootstrap.min.css")'>
+        <link rel="stylesheet" href='@routes.Assets.at("assets/css/onepage-scroll.css")'>
+        <link rel="stylesheet" href='@routes.Assets.at("assets/css/main-min.css")'>
+
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" type="text/css" href="css/ie9-and-down.css" />
+    <![endif]-->
+   <link href="/favicon.ico" rel="icon" type="image/x-icon" />
+
+        <script src='@routes.Assets.at("assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js")'></script>
+    </head>
+
+    <body>
+
+    <div class="main">
+
+      <section class="home">
+        <div class="container">
+
+            <div class="home-phone hide hidden-xs col-xs-12 col-sm-5">
+                <!--<img src='@routes.Assets.at("assets/images/iphone-3.png")' class="iphone-3 " alt="">-->
+            </div>
+
+            <div class="row">
+
+                <div class="home-copy  col-xs-12 col-sm-8 col-sm-offset-2 animated fadeInDown delay-2 ">
+                    <h1 class="demo1">We love<br> <span class="rotate"> Simplicity, Technology, Creativity, Innovation, Scalability </span></h1>
+
+                    <p>Welcome to the CollaMine Project. We would like to share our recent work, hope you like it.</p>
+
+                    <span class="take-a-look animated fadeInDown delay-8"><i class="entypo-down-open"></i>Take a look</span>
+                </div>
+            </div>
+
+        </div>
+      </section>
+
+      <section class="slide-1 slide full-color">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-6 iphone-container ">
+                    <!--<img src='@routes.Assets.at("assets/images/iphone-1.png")' class="hide iphone-1" alt="">-->
+                </div>
+
+                <div class="col-xs-12 col-sm-4 copy">
+                    <h2 class=" hide slide-1-title slide-titles">  Powered by Play Framework </h2>
+                    <p class="slide-1-1 hide">
+                    Play Framework makes it easy to build web applications with Java & Scala.
+                    </p>
+                    
+                    <p class="slide-1-2 hide">
+                    Play is based on a lightweight, stateless, web-friendly architecture.
+                    </p>
+
+                    <p class="slide-1-3 hide">
+                    Built on Akka, Play provides predictable and minimal resource consumption for highly-scalable applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="slide-2 slide full-color">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4 copy">
+                    <h2 class=" hide slide-2-title slide-titles">  What is CollaMine Project about?  </h2>
+
+                    <p class="slide-2-1 hide">
+                    It is created to address two important issues found in the domain of big data analysis:
+                    </p>
+                    
+                    <p class="slide-2-2 hide">
+                    Content collection
+                    </p>
+
+                    <p class="slide-2-3 hide">
+                    Content extraction
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-4 iphone-container">
+                    <!--<img src='@routes.Assets.at("assets/images/iphone-2.png")' class="hide iphone-2" alt="">-->
+                </div>
+
+                <div class="col-xs-12 col-sm-4 copy">
+                    
+                    <p class="slide-2-4 hide">
+                    This project will serve as a common platform for archiving and extracting online documents and Social Network System content.
+                    </p>
+                    
+                    <p class="slide-2-5 hide">
+                    We achieve this by implementing a smart cache mechanism which shares the archived contents to all clients. 
+                    </p>
+
+                    <p class="slide-2-6 hide">
+                    This not only saves consumers from spending extra resource in online content downloading, but also eliminates redundant copies of documents via duplicate detection.
+                    </p>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="slide-3 slide full-color">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 copy">
+                    <h2 class=" hide slide-3-title slide-titles">  The developers </h2>
+                    <p class="slide-3-1 hide">
+                    Farit Ismeth Bin Ali, NYPSIT, Diploma in Engineering Informatics
+                    </p>
+                    
+                    <p class="slide-3-2">
+                    Reginald Woo Yi Yun, NYPSIT, Diploma in Engineering Informatics
+                    </p>
+
+                    <p class="slide-3-3">
+                    PS, special thanks to our supervisor, Dr Kenny Lu for assisting and guiding us on this project! :)
+                    </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 iphone-container ">
+                    <!--<img src='@routes.Assets.at("assets/images/iphone-3.png")' class="hide iphone-3" alt="">-->
+                </div>
+            </div>
+            
+        </div>
+      </section>
+      <!--<section class="contact full-color">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+                <h2>Leave a comment!</h2>
+                <p> We're always keen to here what you think, send us a message from all the usual places. Don't forget to sign up for our newsletter.</p>
+
+                <div class="newsletter clearfix">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" id="emailSignup" name="signup" placeholder="Your Email">
+                            <button type="submit" class="btn btn-signup"><i class="entypo-mail"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="social clearfix">
+                    <a href="#" class="social-item facebook"><i class="entypo-facebook"></i></a>
+                    <a href="#" class="social-item twitter"><i class="entypo-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+      </section>-->
+
+    </div> <!-- /main --> 
+
+    <div class="icon animated fadeInLeft delay-3">
+        <span>NYP SIT</span>
+    </div>
+
+    <div class="settings animated fadeInLeft delay-4">
+        <span class="settings-icon">
+            <i class="entypo-cog"></i>
+        </span>
+        <!--<h3 class="settings-title"> Settings </h3>-->
+
+        <span class="settings-subtitle">Upload?</span>
+        <span class="toggle-video"><a href="@routes.Application.uploadlogin" style="text-decoration:none">Upload here</a></span>
+        <br>
+        <span class="settings-subtitle">Download?</span>
+        <span class="toggle-video"><a href="@routes.Application.downloadlogin" style="text-decoration:none">Download here</a></span>
+        <br>
+        <span class="settings-subtitle">No account yet?</span>
+        <span class="toggle-video"><a href="@routes.Application.signup" style="text-decoration:none">Signup here</a></span>
+    </div>
+
+    	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+        <script>window.jQuery || document.write('<script src='@routes.Assets.at("assets/js/vendor/jquery-1.10.1.min.js")'><\/script>')</script>
+
+        <script src='@routes.Assets.at("assets/js/vendor/bootstrap.min.js")'></script>
+        <script src='@routes.Assets.at("assets/js/vendor/jquery-ui-1.8.22.custom.min.js")'></script>
+        <script src='@routes.Assets.at("assets/js/vendor/jquery.imagesloaded.min.js")'></script>
+        <script src="http://vjs.zencdn.net/4.0/video.js"></script>
+        <script src='@routes.Assets.at("assets/js/vendor/bigvideo.js")'></script>
+        <script src='@routes.Assets.at("assets/js/vendor/jquery.simple-text-rotator.min.js")'></script>
+        <script src='@routes.Assets.at("assets/js/vendor/jquery.onepage-scroll.min.js")'></script>
+        <script src='@routes.Assets.at("assets/js/main-min.js")'></script>
+    </body>
+</html>
+
